@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+  </body>
+  <script>
+    let circlex = 50;
+    let circley = 50;
+    let rkp = false;
+    let lkp = false;
+    let ukp = false;
+    let dkp = false;
+    const myCanvas = document.getElementById("myCanvas");
+    myCanvas.width = 500;
+    myCanvas.height = 300;
+    myCanvas.style.backgroundColor = "gray";
+
+    // 그림 그리는 역할
+    const context = myCanvas.getContext("2d");
+
+    // 도형 그리기 시작
+    context.beginPath();
+    // 색깔
+    context.fillStyle = "blue";
+    // 그리기 완료
+    context.fillText("asdf", 200, 200, 200, 200);
+
+    const image = new Image();
+    image.src = "./asset/img/mole.png";
+    image.onload = () => {
+      context.drawImage(image, 100, 100, 100, 100);
+    };
+  </script>
+</html>
